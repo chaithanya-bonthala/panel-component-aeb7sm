@@ -1,0 +1,9 @@
+<div appTrapFocus class="panel" [ngClass]="'panel-'+position" *ngIf="visible" [class.show]="visible" [@slideAnimation]="position+'In'">
+  <div class="panel-header-container" [ngClass]="config?.headerContainerClass">
+    <h2>{{title}}</h2>
+    <i (click)="close()" class="icon-close-bold-sm"  tabindex="1">&times;</i>
+  </div>
+  <div [ngClass]="config?.bodyContainerClass">
+      <ng-content></ng-content>
+  </div>
+</div>

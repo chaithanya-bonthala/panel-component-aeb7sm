@@ -1,0 +1,58 @@
+<div class="wrapper">
+	<button
+    class="btn"
+    (click)="defaultPanelConfig.headerContainerClass=true;panel.open()"
+    tabindex="1"
+  >
+    Open Default
+  </button>
+	<button
+    class="btn"
+    (click)="defaultPanelConfig.hasOverlay=false;position='top';panel.open()"
+    tabindex="1"
+  >
+    Panel Top
+  </button>
+	<button
+    class="btn"
+    (click)="defaultPanelConfig.hasOverlay=true;position='left';panel.open()"
+    tabindex="1"
+  >
+    Panel Right
+  </button>
+	<button
+    class="btn"
+    (click)="defaultPanelConfig.hasOverlay=true;position='bottom';panel.open()"
+    tabindex="1"
+  >
+    Panel Bottom
+  </button>
+	<button
+    class="btn"
+    (click)="defaultPanelConfig.hasOverlay=true;position='left';panel.open()"
+    tabindex="1"
+  >
+    Panel Left
+  </button>
+
+	<app-panel #panel="panel" [position]="position" [config]="defaultPanelConfig" [title]="'Default Panel'"
+		(onClose)="onDeafultPanelClose($event)">
+		<p>
+			<input type="radio" /> radio<br />
+			<span> span </span>
+			<button disabled>button disabled</button>
+		</p>
+		<p>
+			<a href="#">&lt;a> link</a>
+			<span> span </span>
+			<button>button</button>
+		</p>
+		<p>
+			<input type="checkbox" /> checkbox
+			<select
+        ><option>select</option></select>
+			<br />
+			<button>focusable item</button>
+		</p>
+	</app-panel>
+</div>

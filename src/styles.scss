@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+// body{ 
+//   display: -webkit-flex;
+//   display: flex;
+//   justify-content: space-around;;
+//   font-family: 'Source Sans Pro', sans-serif;
+//   height: 100vh;
+//   background: #e5e5e5;
+// }
+body{ 
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100vh;
+  background: #e5e5e5;
+}
+.wrapper { 
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+ 
+.btn {
+    padding: 0.469rem 1.143em;
+    font-size: 0.875rem;
+    font-weight: 700;
+    background-color: #303030;
+    color: #fff;
+    border-color: #303030;
+    border: 2px solid transparent;
+    margin-bottom: 1rem;
+    background-position: center;
+    transition: background 0.3s;
+        &:hover {
+            background-color: #ce1d1d;
+            color: #fff;
+            border-color: #ce1d1d;
+            cursor: pointer;
+        }
+        &:focus, &:active {
+            background-color: #1a1a1a;
+            color: #fff;
+            border-color: #ce1d1d;
+            outline: 0;
+            box-shadow: none;
+        }
+}
+
+
+
